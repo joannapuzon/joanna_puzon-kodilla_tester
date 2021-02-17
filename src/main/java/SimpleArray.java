@@ -9,6 +9,5 @@ public class SimpleArray {
         String fruit = fruits[2];
         System.out.println(fruit);
         int numberOfElements = fruits.length;
-        System.out.println(numberOfElements);
     }
 }

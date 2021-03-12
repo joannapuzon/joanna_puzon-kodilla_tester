@@ -43,7 +43,7 @@ public class Color {
     public String getColor() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the letter");
-        String color=scanner.nextLine();
-        return color;
+        String result=scanner.nextLine();
+        return result;
     }
 }

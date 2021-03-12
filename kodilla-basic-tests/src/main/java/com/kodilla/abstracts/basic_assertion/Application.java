@@ -8,7 +8,7 @@ public class Application {
         int b = 8;
         int sumResult = calculator.sum(a, b);
         int subtractResult = calculator.subtract(a, b);
-        double powResult = calculator.pow(a, b);
+        double powResult = calculator.pow(a);
 
         boolean correct = ResultChecker.assertEquals(13, sumResult);
         if (correct) {

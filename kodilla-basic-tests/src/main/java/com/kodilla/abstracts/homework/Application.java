@@ -3,13 +3,19 @@ package com.kodilla.abstracts.homework;
 public class Application {
 
     public static void main(String[] args) {
-        Circuit circuit = new Circuit(2,4);
-        SuraceArea suraceArea = new SuraceArea(1, 4);
+        Rectangle rectangle = new Rectangle(2);
+        System.out.println(rectangle.calculateCircumference());
+        System.out.println(rectangle.calculateSurfaceArea());
 
-        ShapeProcessor processor = new ShapeProcessor();
-        processor.process(circuit);
+        Person janek = new Person(35,"Janek",new Driver(2000,"prowadzenie autobusu"));
 
-        ShapeProcessor processor1 = new ShapeProcessor();
-        processor1.process(suraceArea);
+        System.out.println(janek.age + " " + janek.firstName + " " + janek.job.getSalary() + " " + janek.job.getResponsibilities() );
+//        SuraceArea suraceArea = new SuraceArea(1, 4);
+
+//        ShapeProcessor processor = new ShapeProcessor();
+//        processor.process(rectangle);
+//
+//        ShapeProcessor processor1 = new ShapeProcessor();
+//        processor1.process(suraceArea);
         }
     }

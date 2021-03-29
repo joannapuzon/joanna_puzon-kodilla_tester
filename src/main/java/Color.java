@@ -2,48 +2,28 @@ import java.util.Scanner;
 
 public class Color {
 
-
-    public static String getUserColor() {
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            System.out.println("Enter the first letter of color");
-            String colors = scanner.nextLine().trim();
-            if (colors.length() >= 1) {
-                return colors;
-            }
-            System.out.println("Name of color is too long. Write first letter");
-        }
-    }
-
     public String getUserSelection() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Select the letter of color (R-red, O-orange, B-black, G-green):");
-            String calc = scanner.nextLine().trim().toUpperCase();
-            String UserSelected = Color.getUserColor();
-            String result = "0";
-            switch (calc) {
+            String result = scanner.nextLine().trim().toUpperCase();
+
+            switch (result) {
                 case "R":
-                    result = "RED";
-                    break;
+                    return "RED";
+
                 case "O":
-                    result = "ORANGE";
-                    break;
+                    return "ORANGE";
+
                 case "B":
-                    result = "BLACK";
-                    break;
+                    return "BLACK";
+
                 case "G":
-                    result = "GREEN";
-                    break;
+                    return "GREEN";
+
                 default:
                     System.out.println("Wrong letter. Try again");
             }
         }
-    }
-    public String getColor() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter the letter");
-        String result=scanner.nextLine();
-        return result;
     }
 }

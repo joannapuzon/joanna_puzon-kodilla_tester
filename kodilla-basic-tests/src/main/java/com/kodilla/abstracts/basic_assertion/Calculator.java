@@ -13,4 +13,5 @@ public class Calculator {
     public double pow(double a) {
         return Math.pow(a, 2);
     }
-}
+
+    }

@@ -5,26 +5,20 @@ public class CashMachine {
     private int[] transactions;
     private int size;
 
-//    [] ilość?
-//    czemu private na początku?
 
     public CashMachine(){
-        this.transactions = new int[0];
+        this.transactions = new int[1];
         this.size = 0;
-//        dlaczego daje się na początku rozmiar 0 itd?
     }
 
     public void addTransaction(int amount){
-        if ((getBalance() + amount) >= 0){
+        if (getBalance() + amount>= 0){
             this.size++;
             int[] tempTab = new int[size];
             System.arraycopy(transactions,0,tempTab,0,transactions.length);
             tempTab[size -1] = amount;
             this.transactions = tempTab;
 
-//                     czemu podwójny nawias
-//                    2 ostatnie linijki,
-//                    (czemu dwa razy przypisujemy do tabelki, amount itd.)
         }
     }
 
@@ -81,6 +75,12 @@ public class CashMachine {
         for(int i = 0; i < transactions.length; i++){
             if (transactions[i] > 0){
                 sum = sum + transactions[i];
+//                pierwszy krok
+//                sum = 0 + transactions[0];
+//                  sum = 0 + 100
+//                drugi krok
+//                sum = 0 + trasactions[0] + transactions[1];
+//                sum = 100 + transactions[1]
             }
         }
         return sum / getNumberOfDeposits();
@@ -101,6 +101,6 @@ public class CashMachine {
             sum = sum + transactions[i];
         }
         }
-        return (sum/getNumberOfWithdrawals());
+        return sum/getNumberOfWithdrawals();
     }
 }

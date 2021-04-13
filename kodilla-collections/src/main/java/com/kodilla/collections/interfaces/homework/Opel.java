@@ -21,6 +21,15 @@ public class Opel implements Car {
     }
 
     @Override
+    public String toString() {
+        return "Opel{" +
+                "speed=" + speed +
+                '}';
+    }
+
+
+
+    @Override
     public void decreaseSpeed() {
         int result = speed - 30;
         System.out.println(result);

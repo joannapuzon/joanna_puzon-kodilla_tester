@@ -10,6 +10,7 @@ public class CarUtils {
         System.out.println("-----------------------------");
         System.out.println("Shape kind " + getShapeName(car));
         System.out.println("Car speed: " + car.getSpeed());
+
     }
 
     private static String getShapeName(Car car) {
@@ -19,6 +20,7 @@ public class CarUtils {
             return "Ford";
         else
             return "Unknown car name";
+
 
     }
 }

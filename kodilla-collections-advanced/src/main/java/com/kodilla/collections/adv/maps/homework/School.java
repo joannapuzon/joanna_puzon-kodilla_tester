@@ -4,15 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class School {
-    private List<Double> studentNumbers = new ArrayList<>();
+    private List<Integer> studentNumbers = new ArrayList<>();
+    private String schoolName;
 
-    public School(double... studentNumbers) {
+    public School(String schoolName, int... studentNumbers) {
+        this.schoolName = schoolName;
 //        dlaczego tylko z kropkami działa
-        for (double studentNumber : studentNumbers)
+        for (int studentNumber : studentNumbers)
             this.studentNumbers.add(studentNumber);
     }
 
-    public List<Double> getStudentNumbers() {
+    public List<Integer> getStudentNumbers() {
         return studentNumbers;
+    }
+
+    public String getSchoolName() {
+        return schoolName;
     }
 }

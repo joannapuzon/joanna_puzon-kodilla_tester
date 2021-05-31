@@ -7,13 +7,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BankTestSuite {
 
     @Test
-    public void shouldReturnNumberDevices(){
+    public void shouldReturnNumberDevices() {
         Bank bank = new Bank(4);
         assertEquals(4, bank.getNumberOfDevices());
     }
 
     @Test
-    public void shouldCountNumberAllTransactionsEvenIfInvalidTransactionTriedToBeMade(){
+    public void shouldCountNumberAllTransactionsEvenIfInvalidTransactionTriedToBeMade() {
         //invalid transaction - trying withdraw money when not enough cash in the cash machine
         Bank bank = new Bank(4);
 
@@ -41,7 +41,7 @@ public class BankTestSuite {
     }
 
     @Test
-    public void shouldCountTotalBalanceEvenIfInvalidTransactionTriedToBeMade(){
+    public void shouldCountTotalBalanceEvenIfInvalidTransactionTriedToBeMade() {
         //invalid transaction - trying withdraw money when not enough cash in the cash machine
         Bank bank = new Bank(4);
 
@@ -69,7 +69,7 @@ public class BankTestSuite {
     }
 
     @Test
-    public void shouldCountNumberAllDeposits(){
+    public void shouldCountNumberAllDeposits() {
         Bank bank = new Bank(4);
 
         bank.addTransaction(0, 50);
@@ -96,7 +96,7 @@ public class BankTestSuite {
     }
 
     @Test
-    public void shouldCountNumberAllWithdrawalsEvenIfInvalidTransactionTriedToBeMade(){
+    public void shouldCountNumberAllWithdrawalsEvenIfInvalidTransactionTriedToBeMade() {
         //invalid transaction - trying withdraw money when not enough cash in the cash machine
         Bank bank = new Bank(4);
 
@@ -124,7 +124,7 @@ public class BankTestSuite {
     }
 
     @Test
-    public void shouldCalcAverageAllDeposits(){
+    public void shouldCalcAverageAllDeposits() {
         Bank bank = new Bank(4);
 
         bank.addTransaction(0, 50);
@@ -151,7 +151,7 @@ public class BankTestSuite {
     }
 
     @Test
-    public void shouldCalcAverageAllWithdrawalsEvenIfInvalidTransactionTriedToBeMade(){
+    public void shouldCalcAverageAllWithdrawalsEvenIfInvalidTransactionTriedToBeMade() {
         //invalid transaction - trying withdraw money when not enough cash in the cash machine
         Bank bank = new Bank(4);
 
